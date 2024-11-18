@@ -1,22 +1,23 @@
 NAME = libftprintf.a
 
-SRC= lili.c
+SRC= ft_printf.c ft_putadress.c ft_putchar.c ft_putdecimal.c ft_puthexnbr.c ft_putHEXnbr.c ft_putnbr.c ft_putstr.c
 
 CC = cc
 
-OJBS= $(SRC:.c=.o)
+OBJS= $(SRC:.c=.o)
 
 RM= rm -f
 
-FLAGS= -Werror -Wextra -Wall
+CFLAGS= -Werror -Wextra -Wall
 
-all:$(NAME)
-$(NAME): $(OBJS)
+all:	$(NAME)
+
+$(NAME):	$(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS) 
 fclean: clean
 	$(RM) $(NAME)
-re:
+re: fclean all
 

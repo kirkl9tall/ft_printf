@@ -6,7 +6,7 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:44:33 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/14 00:10:30 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/18 21:24:56 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int   count (unsigned  int n)
 	}
 	return (x);
 }
-int	puthexnbr(unsigned int n)
+int	ft_puthexnbr(unsigned int n)
 {
 	char	*p;
 	char	pfinal[20];
@@ -33,9 +33,13 @@ int	puthexnbr(unsigned int n)
 	int		mod;
 
 	if (n == 0)
+	{
 		write(1, "0", 1);
+		return (1);
+	}
 	x = count(n);
 	p = "0123456789abcdef";
+	pfinal[x] = '\0';
 	while (n != 0)
 	{
 		mod = n % 16;
@@ -43,15 +47,16 @@ int	puthexnbr(unsigned int n)
 		pfinal[x - 1] = p[mod];
 		x--;
 	}
+
 	while (pfinal[x])
 		write(1, &pfinal[x++], 1);
 	return (x);
 }
-
-int	main(void)
+/*
+ int	main(void)
 {
-	printf ("%d\n",puthexnbr(645645));
-	printf("\n%x\n", 645645);
+	printf("%d",ft_puthexnbr(1));
+	printf("\n%x\n", 1);
  //   printf("10%% \n");
     
-}
+} */

@@ -13,7 +13,7 @@ static int   count (unsigned  int n)
 	}
 	return (x);
 }
-int	puthexnbr(unsigned int n)
+int	ft_puthexanbr(unsigned int n)
 {
 	char	*p;
 	char	pfinal[20];
@@ -21,9 +21,13 @@ int	puthexnbr(unsigned int n)
 	int		mod;
 
 	if (n == 0)
+	{
 		write(1, "0", 1);
+		return (1);
+	}
 	x = count(n);
 	p = "0123456789ABCDEF";
+	pfinal[x] = '\0';
 	while (n != 0)
 	{
 		mod = n % 16;
@@ -31,14 +35,16 @@ int	puthexnbr(unsigned int n)
 		pfinal[x - 1] = p[mod];
 		x--;
 	}
+
 	while (pfinal[x])
 		write(1, &pfinal[x++], 1);
 	return (x);
 }
-int	main(void)
+ /*
+ int	main(void)
 {
-	printf ("%d\n",puthexnbr(645645));
-	printf("\n%X\n", 645645);
+	ft_puthexanbr(666666);
+	printf("\n%X\n", 666666);
  //   printf("10%% \n");
     
-}
+}  */

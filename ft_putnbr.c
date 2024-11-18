@@ -23,20 +23,19 @@ int nega(int number)
 			number = number / 10;
 			count++;
 		}
-		while (x--)
-			printf("%d", arr[x]);
 	}
 	else if (number <= 9)
 	{
 		ft_putchar(number + 48);
 		return (2);
 	}
+	while (x--)
+		ft_putchar(arr[x]+ 48);  
 	return (count);
 }
 
 int	ft_putnbr(int number)
 {
-	int	mod;
 	int count;
 	int arr[11];
 	int x;
@@ -55,15 +54,15 @@ int	ft_putnbr(int number)
 			number = number / 10;
 			count++;
 		}
-		while (x--)
-			printf("%d", arr[x]);
 	}
 	else if (number <= 9)
 		return (ft_putchar(number + 48));
+	while (x--)
+		ft_putchar(arr[x]+48);  
 	return (count);
 }
-
+ /* 
 int main ()
 {
-	printf("\n%d\n",ft_putnbr(-2147483648));
-}
+	printf("\n%d\n",ft_putnbr(-595959));
+} */

@@ -4,29 +4,28 @@
 
 
 int sum(int count, ...)
-{
-    va_list args;
-    va_start(args, count);
+{   
+    int total;
+    int i;
+    va_list ap;
+    va_start(ap,count);
 
-    int s = 0;
-    int i = 0;
-    int x;
-
-    while  (i < count)
+    total = 1;
+    i = 0;
+    while (i < count)
     {
-        x = va_arg(args, int);
-     //   printf("%d\n",x);
-        s += x;
-         printf("%d\n",s);
+        total *= va_arg(ap,int);
         i++;
     }
-    va_end(args);
-    return (s);
+    return (total);
 
 }
 
+/* 
 int main ()
 {
-    printf("sum is : %d \n",sum(5,1,2,6,4,3));
+
+    fx();
 }
 
+ */
