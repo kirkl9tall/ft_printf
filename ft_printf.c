@@ -6,7 +6,7 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:32 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 11:51:42 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 19:02:57 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_printf(const char *format, ...)
 
 	len = 0;
 	x = 0;
-	if (!format)
+	if (!format || (format[x] == '%' && format[x+1] == '\0'))
 		return (-1);
 	va_start(ap, format);
 	while (format[x])
@@ -58,18 +58,15 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (len);
 }
-
-/*  int main()
+/*
+#include <stdio.h>
+  int main()
 {
-	int i = printf("%d %i %u %s  %c %p     kaka    %X
-			%x 10%% ",2147483647,-2147483648, 4294967295, NULL, 'z',NULL,
-			123 ,89898989);
+	int i = printf("%",2147483647,-2147483648, 4294967295, NULL, 'z',NULL,123 ,89898989);
 	printf("\nOriginal printf length: %d\n", i);
 
-	int a = ft_printf("%d %i %u %s  %c %p     kaka    %X
-			%x 10%% ",2147483647,-2147483648, 4294967295,NULL, 'z',NULL,
-			123 ,89898989);
+	int a = ft_printf("%");
 	printf("\nft_printf length: %d\n", a);
 
 	return (0);
-}  */
+}*/  
