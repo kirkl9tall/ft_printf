@@ -6,10 +6,10 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:54 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 10:14:45 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:54:13 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {

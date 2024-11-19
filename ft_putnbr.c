@@ -6,11 +6,10 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:51 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 10:10:05 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:53:04 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	nega(int number)
 {

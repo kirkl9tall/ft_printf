@@ -6,11 +6,11 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:32 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 10:09:33 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:51:42 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	modas(char c, va_list ap)
 {

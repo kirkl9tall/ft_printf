@@ -6,12 +6,12 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:12:28 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 10:12:29 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:49:31 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
 

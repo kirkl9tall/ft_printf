@@ -6,10 +6,10 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:48 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 10:18:06 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:52:48 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	count(unsigned int n)
 {
