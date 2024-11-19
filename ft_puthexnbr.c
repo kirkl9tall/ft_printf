@@ -6,17 +6,15 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:44:33 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/18 21:24:56 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 10:17:49 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "printf.h"
 
-#include <stdio.h>
-#include <unistd.h>
-
-static int   count (unsigned  int n)
+static int	count(unsigned int n)
 {
-	int x;
-	
+	int	x;
+
 	x = 0;
 	while (n != 0)
 	{
@@ -25,6 +23,7 @@ static int   count (unsigned  int n)
 	}
 	return (x);
 }
+
 int	ft_puthexnbr(unsigned int n)
 {
 	char	*p;
@@ -47,7 +46,6 @@ int	ft_puthexnbr(unsigned int n)
 		pfinal[x - 1] = p[mod];
 		x--;
 	}
-
 	while (pfinal[x])
 		write(1, &pfinal[x++], 1);
 	return (x);
@@ -58,5 +56,5 @@ int	ft_puthexnbr(unsigned int n)
 	printf("%d",ft_puthexnbr(1));
 	printf("\n%x\n", 1);
  //   printf("10%% \n");
-    
+
 } */

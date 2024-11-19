@@ -1,14 +1,26 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 10:09:54 by abismail          #+#    #+#             */
+/*   Updated: 2024/11/19 10:14:45 by abismail         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "printf.h"
 
 int	ft_putstr(char *str)
 {
 	int	x;
-	int count;
+	int	count;
+
 	if (!str)
-		{
-			write(1,"(null)",6);
-			return (6);
-		}
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	count = 0;
 	x = 0;
 	while (str[x])

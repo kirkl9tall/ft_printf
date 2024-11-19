@@ -1,10 +1,20 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putHEXnbr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 10:09:48 by abismail          #+#    #+#             */
+/*   Updated: 2024/11/19 10:18:06 by abismail         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "printf.h"
 
-static int   count (unsigned  int n)
+static int	count(unsigned int n)
 {
-	int x;
-	
+	int	x;
+
 	x = 0;
 	while (n != 0)
 	{
@@ -13,6 +23,7 @@ static int   count (unsigned  int n)
 	}
 	return (x);
 }
+
 int	ft_puthexanbr(unsigned int n)
 {
 	char	*p;
@@ -35,16 +46,15 @@ int	ft_puthexanbr(unsigned int n)
 		pfinal[x - 1] = p[mod];
 		x--;
 	}
-
 	while (pfinal[x])
 		write(1, &pfinal[x++], 1);
 	return (x);
 }
- /*
- int	main(void)
+/*
+int	main(void)
 {
-	ft_puthexanbr(666666);
-	printf("\n%X\n", 666666);
- //   printf("10%% \n");
-    
+   ft_puthexanbr(666666);
+   printf("\n%X\n", 666666);
+//   printf("10%% \n");
+
 }  */

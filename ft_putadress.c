@@ -1,11 +1,20 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putadress.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 10:09:37 by abismail          #+#    #+#             */
+/*   Updated: 2024/11/19 10:15:57 by abismail         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "printf.h"
 
-static int   count (unsigned  int n)
+static int	count(unsigned int n)
 {
-	int x;
-	
+	int	x;
+
 	x = 0;
 	while (n != 0)
 	{
@@ -14,7 +23,8 @@ static int   count (unsigned  int n)
 	}
 	return (x);
 }
-int	ft_putput(unsigned long long n)
+
+static int	ft_putput(unsigned long long n)
 {
 	char	*p;
 	char	pfinal[20];
@@ -36,25 +46,26 @@ int	ft_putput(unsigned long long n)
 		pfinal[x - 1] = p[mod];
 		x--;
 	}
-
 	while (pfinal[x])
 		write(1, &pfinal[x++], 1);
 	return (x);
 }
+
 int	ft_putadress(void *px)
 {
-	int count;
+	int	count;
+
 	if (!px)
 		return (ft_putstr("(nil)"));
 	count = ft_putstr("0x");
 	count += ft_putput((unsigned long long)px);
 	return (count);
-} 
-/* 
+}
+/*
 int	main(void)
 {
-	 char c = '9';
+		char c = '9';
 	int i = putadress(&c);
 	printf("\n%d\n",i);
-	printf("%p\n", &c); 
+	printf("%p\n", &c);
 } */
