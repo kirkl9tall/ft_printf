@@ -6,13 +6,13 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:37 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/20 17:10:29 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:46:19 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	count(unsigned int n)
+int	count(unsigned long long n)
 {
 	int	x;
 
@@ -40,7 +40,7 @@ int	ft_putput(unsigned long long n)
 	x = count(n);
 	p = "0123456789abcdef";
 	pfinal[x] = '\0';
-	while (n != 0)
+	while (n != 0 && x >1)
 	{
 		mod = n % 16;
 		n = n / 16;
@@ -51,7 +51,7 @@ int	ft_putput(unsigned long long n)
 		write(1, &pfinal[x++], 1);
 	return (x);
 }
-
+#include <stdio.h>
 int	ft_putadress(void *px)
 {
 	int	count;
@@ -62,11 +62,11 @@ int	ft_putadress(void *px)
 	count += ft_putput((unsigned long long)px);
 	return (count);
 }
-/*
+/* 
 int	main(void)
 {
 		char c = '9';
-	int i = putadress(&c);
+	int i = ft_putadress(&c);
 	printf("\n%d\n",i);
 	printf("%p\n", &c);
-} */
+}  */
