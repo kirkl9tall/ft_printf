@@ -6,7 +6,7 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:37 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/20 17:53:56 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 20:33:38 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_putput(unsigned long long n)
 		write(1, &pfinal[x++], 1);
 	return (x);
 }
-#include <stdio.h>
+
 int	ft_putadress(void *px)
 {
 	int	count;
