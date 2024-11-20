@@ -6,7 +6,7 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:37 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/20 17:46:19 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:53:56 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_putput(unsigned long long n)
 	x = count(n);
 	p = "0123456789abcdef";
 	pfinal[x] = '\0';
-	while (n != 0 && x >1)
+	while (n != 0)
 	{
 		mod = n % 16;
 		n = n / 16;
