@@ -6,12 +6,13 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:37 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 11:51:59 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:18:34 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static int	count(unsigned int n)
+int	count(unsigned int n)
 {
 	int	x;
 
@@ -24,7 +25,7 @@ static int	count(unsigned int n)
 	return (x);
 }
 
-static int	ft_putput(unsigned long long n)
+int	ft_putput(unsigned long long n)
 {
 	char	*p;
 	char	pfinal[20];

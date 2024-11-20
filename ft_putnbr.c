@@ -6,12 +6,13 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:51 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 11:53:04 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:18:12 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static int	nega(int number)
+int	nega(int number)
 {
 	int	arr[11];
 	int	x;

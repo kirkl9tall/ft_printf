@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 
-SRC= ft_printf.c ft_putadress.c ft_putchar.c ft_putdecimal.c ft_puthexnbr.c ft_putHEXnbr.c ft_putnbr.c ft_putstr.c
+SRC= ft_printf.c ft_putadress.c ft_putchar.c ft_putdecimal.c ft_puthexnbr.c ft_putnbr.c ft_putstr.c
 
 CC = cc
 

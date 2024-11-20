@@ -6,12 +6,13 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:44:33 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 11:52:36 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:58:31 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static int	count(unsigned int n)
+int	counter(unsigned int n)
 {
 	int	x;
 
@@ -24,11 +25,11 @@ static int	count(unsigned int n)
 	return (x);
 }
 
-int	ft_puthexnbr(unsigned int n)
+int	upper(unsigned int n)
 {
 	char	*p;
 	char	pfinal[20];
-	int		x;
+	int		y;
 	int		mod;
 
 	if (n == 0)
@@ -36,7 +37,31 @@ int	ft_puthexnbr(unsigned int n)
 		write(1, "0", 1);
 		return (1);
 	}
-	x = count(n);
+	y = counter(n);
+	p = "0123456789ABCDEF";
+	pfinal[y] = '\0';
+	while (n != 0)
+	{
+		mod = n % 16;
+		n = n / 16;
+		pfinal[y - 1] = p[mod];
+		y--;
+	}
+	while (pfinal[y])
+		write(1, &pfinal[y++], 1);
+	return (y);
+}
+
+int	ft_puthexnbr(unsigned int n, char c)
+{
+	char	*p;
+	char	pfinal[20];
+	int		x;
+	int		mod;
+
+	if (n == 0 || c == 'X')
+		return (upper(n));
+	x = counter(n);
 	p = "0123456789abcdef";
 	pfinal[x] = '\0';
 	while (n != 0)
