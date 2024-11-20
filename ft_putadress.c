@@ -6,15 +6,13 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:37 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/20 17:07:00 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:10:29 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-#include <unistd.h>
-
-int	count(unsigned long long n)
+int	count(unsigned int n)
 {
 	int	x;
 
@@ -31,7 +29,7 @@ int	ft_putput(unsigned long long n)
 {
 	char	*p;
 	char	pfinal[20];
-	int		index;
+	int		x;
 	int		mod;
 
 	if (n == 0)
@@ -39,44 +37,31 @@ int	ft_putput(unsigned long long n)
 		write(1, "0", 1);
 		return (1);
 	}
-	index = count(n);
+	x = count(n);
 	p = "0123456789abcdef";
-	pfinal[index] = '\0'; // Null-terminate the string
+	pfinal[x] = '\0';
 	while (n != 0)
 	{
 		mod = n % 16;
 		n = n / 16;
-		pfinal[--index] = p[mod]; // Fill from the end
+		pfinal[x - 1] = p[mod];
+		x--;
 	}
-	write(1, pfinal, count(n)); // Write the entire string
-	return (count(n));
-}
-
-int	ft_putstr(char *str)
-{
-	int i = 0;
-
-	if (!str)
-		return (0);
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
+	while (pfinal[x])
+		write(1, &pfinal[x++], 1);
+	return (x);
 }
 
 int	ft_putadress(void *px)
 {
-	int	count = 0; // Initialize count
+	int	count;
 
 	if (!px)
 		return (ft_putstr("(nil)"));
-	count += ft_putstr("0x"); // Print the "0x" prefix
-	count += ft_putput((unsigned long long)px); // Print the address
+	count = ft_putstr("0x");
+	count += ft_putput((unsigned long long)px);
 	return (count);
 }
-
 /*
 int	main(void)
 {
