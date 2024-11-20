@@ -6,12 +6,13 @@
 /*   By: abismail <abismail@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:09:40 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/19 18:54:56 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:52:12 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (1);
 }
